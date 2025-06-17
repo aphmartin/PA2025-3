@@ -1,0 +1,103 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "LogicaDatos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/LogicaDatos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LogicaDatos.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "LogicaDatos/1.0.0": {
+      "type": "project",
+      "path": "../LogicaDatos/LogicaDatos.csproj",
+      "msbuildProject": "../LogicaDatos/LogicaDatos.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "LogicaDatos >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\marti\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\LogicaNegocios\\LogicaNegocios.csproj",
+      "projectName": "LogicaNegocios",
+      "projectPath": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\LogicaNegocios\\LogicaNegocios.csproj",
+      "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+      "outputPath": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\LogicaNegocios\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {
+            "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\LogicaDatos\\LogicaDatos.csproj": {
+              "projectPath": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\LogicaDatos\\LogicaDatos.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
