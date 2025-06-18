@@ -1,0 +1,46 @@
+create database POS
+go
+use POS
+
+create table Usuarios
+(
+idk int identity (1,1) primary key,
+nombre nvarchar (100),
+apellidoP nvarchar (100),
+apellidoM nvarchar (100),
+correo nvarchar (100),
+usuario nvarchar (20),
+password nvarcha(20,
+idPerfil int
+)
+
+insert into Usuarios
+values
+('Martin','Anduaga','Pinto','martin.anduaga@ues.mx','martin','12345',1)
+
+---PROCEDIMIENTOS ALMACENADOS 
+create proc proc_ObtenerUsuarios
+as
+select * from Usuario
+go
+
+--INSERTAR 
+create proc proc_InsertarUsuarios
+@nombre nvarchar (100),
+@apellidoP nvarchar (100),
+@apellidoM nvarchar (100),
+@correo nvarchar (100),
+@usuario nvarchar (20),
+@password nvarcha(20,
+@idPerfil int
+as
+insert into Usuario values (@nombre,@apellidoP,@apellidoM,@correo,@usuario, @pwd)
+go
+
+--validar login
+create proc proc_ValidaLogin
+@usuario nvarchar(20),
+@pwd nvarchar (20)
+as
+select * from Usuario where usuario=@usuario and password=@pwd
+go

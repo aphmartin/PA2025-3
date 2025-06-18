@@ -44,16 +44,65 @@ namespace LogicaNegocios
 
         public bool fnValidaLogin()
         {
-            return true;
+            try
+            {
+                Boolean resultado = false;
+
+
+
+                //Recoger datos del login
+                DataUsuario mUsuario = new DataUsuario();
+                mUsuario.Auntenticar(usuario, pwd);
+                if (mUsuario.renglonesAfectados == 1)
+                {
+
+                    resultado = true;
+                    //Utilerias.G_NombreUsuario = mUsuario.NombreDeUsuario;
+                    //Utilerias.G_Usuario = mUsuario.UserName;
+                }
+                else
+                {
+
+                    resultado = false;
+                    //Utilerias.G_NombreUsuario = "";
+                    //Utilerias.G_Usuario = "";
+
+                }
+                return resultado;
+
+                //conectar BD
+
+
+
+                //Validar Consulta
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("[fnValidaLogin]" + e.ToString());
+                return false;
+            }
+
         }
 
         public bool fnGuardar()
         {
-
-            DataUsuario dataUsuario = new DataUsuario();
-            return dataUsuario.Insertar(this.Usuario, this.Pwd, this.Nombre, this.ApellidoP, this.ApellidoM, this.Correo, this.Telefono);
-            
-          
+            try
+            {
+                Boolean resultado = false;
+                DataUsuario vUsuario = new DataUsuario();
+                vUsuario.Insertar(nombre, apellidoP, apellidoM, correo, usuario, pwd, telefono, clave);
+                if (vUsuario.renglonesAfectados > 0)
+                {
+                    resultado = true;
+                }
+                return resultado;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                return false;
+            }
         }
     }
 
