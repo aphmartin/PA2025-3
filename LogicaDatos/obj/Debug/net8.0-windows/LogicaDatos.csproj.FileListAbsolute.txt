@@ -9,3 +9,5 @@ C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\
 C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\obj\Debug\net8.0-windows\refint\LogicaDatos.dll
 C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\obj\Debug\net8.0-windows\LogicaDatos.pdb
 C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\obj\Debug\net8.0-windows\ref\LogicaDatos.dll
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\obj\Debug\net8.0-windows\LogicaDatos.csproj.AssemblyReference.cache
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\obj\Debug\net8.0-windows\LogicaDatos.sourcelink.json

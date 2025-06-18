@@ -11,10 +11,10 @@ namespace LogicaDatos
     public class ConexionSQL
     {
         SqlConnection conn;
-        String nombreServidor = "NombreDelServidor";
-        String nombreBD = "NombreBaseDatos";
-        String usuarioBD = "UsarioBaseDatos";
-        String passwordBD = "PasswordBaseDatos";
+        String nombreServidor = "DELL-MARTIN";
+        String nombreBD = "POS";
+        String usuarioBD = "userpos";
+        String passwordBD = "ues2025";
         private String ConnectionString;
 
         public ConexionSQL()

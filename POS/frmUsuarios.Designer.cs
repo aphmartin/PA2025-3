@@ -34,18 +34,21 @@
             panel2 = new Panel();
             btnGuardar = new Button();
             panel3 = new Panel();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
+            label8 = new Label();
+            txtUsuario = new TextBox();
+            txtPwd = new TextBox();
+            txtCorreo = new TextBox();
             txtNombre = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtAp1 = new TextBox();
+            txtAp2 = new TextBox();
+            txtID = new TextBox();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
+            btnBuscar = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -106,12 +109,15 @@
             // panel3
             // 
             panel3.BackColor = Color.AliceBlue;
-            panel3.Controls.Add(textBox6);
-            panel3.Controls.Add(textBox5);
+            panel3.Controls.Add(btnBuscar);
+            panel3.Controls.Add(label8);
+            panel3.Controls.Add(txtUsuario);
+            panel3.Controls.Add(txtPwd);
+            panel3.Controls.Add(txtCorreo);
             panel3.Controls.Add(txtNombre);
-            panel3.Controls.Add(textBox3);
-            panel3.Controls.Add(textBox2);
-            panel3.Controls.Add(textBox1);
+            panel3.Controls.Add(txtAp1);
+            panel3.Controls.Add(txtAp2);
+            panel3.Controls.Add(txtID);
             panel3.Controls.Add(label7);
             panel3.Controls.Add(label6);
             panel3.Controls.Add(label5);
@@ -124,19 +130,36 @@
             panel3.Size = new Size(1008, 396);
             panel3.TabIndex = 2;
             // 
-            // textBox6
+            // label8
             // 
-            textBox6.Location = new Point(283, 254);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(343, 27);
-            textBox6.TabIndex = 11;
+            label8.AutoSize = true;
+            label8.Location = new Point(140, 259);
+            label8.Name = "label8";
+            label8.Size = new Size(59, 20);
+            label8.TabIndex = 13;
+            label8.Text = "Usuario";
+            label8.Click += label8_Click;
             // 
-            // textBox5
+            // txtUsuario
             // 
-            textBox5.Location = new Point(283, 210);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(343, 27);
-            textBox5.TabIndex = 10;
+            txtUsuario.Location = new Point(283, 252);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(343, 27);
+            txtUsuario.TabIndex = 12;
+            // 
+            // txtPwd
+            // 
+            txtPwd.Location = new Point(283, 293);
+            txtPwd.Name = "txtPwd";
+            txtPwd.Size = new Size(343, 27);
+            txtPwd.TabIndex = 11;
+            // 
+            // txtCorreo
+            // 
+            txtCorreo.Location = new Point(283, 210);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(343, 27);
+            txtCorreo.TabIndex = 10;
             // 
             // txtNombre
             // 
@@ -145,31 +168,31 @@
             txtNombre.Size = new Size(343, 27);
             txtNombre.TabIndex = 9;
             // 
-            // textBox3
+            // txtAp1
             // 
-            textBox3.Location = new Point(283, 122);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(343, 27);
-            textBox3.TabIndex = 8;
+            txtAp1.Location = new Point(283, 122);
+            txtAp1.Name = "txtAp1";
+            txtAp1.Size = new Size(343, 27);
+            txtAp1.TabIndex = 8;
             // 
-            // textBox2
+            // txtAp2
             // 
-            textBox2.Location = new Point(283, 166);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(343, 27);
-            textBox2.TabIndex = 7;
+            txtAp2.Location = new Point(283, 166);
+            txtAp2.Name = "txtAp2";
+            txtAp2.Size = new Size(343, 27);
+            txtAp2.TabIndex = 7;
             // 
-            // textBox1
+            // txtID
             // 
-            textBox1.Location = new Point(283, 34);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 6;
+            txtID.Location = new Point(283, 34);
+            txtID.Name = "txtID";
+            txtID.Size = new Size(125, 27);
+            txtID.TabIndex = 6;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(140, 261);
+            label7.Location = new Point(140, 300);
             label7.Name = "label7";
             label7.Size = new Size(75, 20);
             label7.TabIndex = 5;
@@ -220,6 +243,17 @@
             label2.TabIndex = 0;
             label2.Text = "Folio";
             // 
+            // btnBuscar
+            // 
+            btnBuscar.BackgroundImage = Properties.Resources.ico_lupa;
+            btnBuscar.BackgroundImageLayout = ImageLayout.Zoom;
+            btnBuscar.Location = new Point(419, 34);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(52, 32);
+            btnBuscar.TabIndex = 14;
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
+            // 
             // frmUsuarios
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -248,17 +282,20 @@
         private Label label1;
         private Button btnGuardar;
         private Panel panel3;
-        private TextBox textBox6;
-        private TextBox textBox5;
+        private TextBox txtPwd;
+        private TextBox txtCorreo;
         private TextBox txtNombre;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtAp1;
+        private TextBox txtAp2;
+        private TextBox txtID;
         private Label label7;
         private Label label6;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
+        private TextBox txtUsuario;
+        private Label label8;
+        private Button btnBuscar;
     }
 }

@@ -23,3 +23,11 @@ C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\obj\Debu
 C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\obj\Debug\net8.0-windows\POS.Properties.Resources.resources
 C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\bin\Debug\net8.0-windows\LogicaDatos.dll
 C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\bin\Debug\net8.0-windows\LogicaDatos.pdb
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\obj\Debug\net8.0-windows\POS.sourcelink.json
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\obj\Debug\net8.0-windows\POS.frmBuscar.resources

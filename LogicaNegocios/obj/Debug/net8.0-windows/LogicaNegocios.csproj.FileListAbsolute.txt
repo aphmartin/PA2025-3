@@ -13,3 +13,4 @@ C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegoci
 C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\bin\Debug\net8.0-windows\LogicaDatos.pdb
 C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\obj\Debug\net8.0-windows\LogicaNegocios.csproj.AssemblyReference.cache
 C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\obj\Debug\net8.0-windows\LogicaNe.CFB83674.Up2Date
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\obj\Debug\net8.0-windows\LogicaNegocios.sourcelink.json

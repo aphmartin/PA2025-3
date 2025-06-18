@@ -26,7 +26,7 @@ namespace LogicaDatos
                 comandoSQL.Connection = connSQL.AbrirConexion();
 
                 //Enviar nombre de recursos sql
-                comandoSQL.CommandText = "proc_InsertarUsuario";
+                comandoSQL.CommandText = "proc_InsertarUsuarios";
 
                 //Tipo de comando
                 comandoSQL.CommandType = System.Data.CommandType.StoredProcedure;
@@ -73,7 +73,7 @@ namespace LogicaDatos
                 comandoSQL.Connection = connSQL.AbrirConexion();
 
                 //Enviar nombre de recursos sql
-                comandoSQL.CommandText = "proc_ValidaUsuario";
+                comandoSQL.CommandText = "proc_ValidaLogin";
 
                 //Tipo de comando
                 comandoSQL.CommandType = System.Data.CommandType.StoredProcedure;

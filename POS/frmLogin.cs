@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LogicaNegocios;
+using Microsoft.VisualBasic;
 
 namespace POS
 {
@@ -21,10 +22,23 @@ namespace POS
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             //recolectar datos de la pantalla
+            if (Utilerias.validaCampo(txtUsuario.Text, 5)==false)
+            {
+                MessageBox.Show("El campo Usuario es obligatorio", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (Utilerias.validaCampo(txtPWD.Text, 5)==false)
+            {
+                MessageBox.Show("El campo Contraseña es obligatorio", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string usuario = txtUsuario.Text;
             string pwd = txtPWD.Text;
 
             Usuarios objUsuario = new Usuarios();
+            objUsuario.Usuario = usuario;
+            objUsuario.Pwd = pwd;
             bool acceso = objUsuario.fnValidaLogin();
 
             if (acceso)
@@ -48,6 +62,11 @@ namespace POS
             this.Close();
 
 
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

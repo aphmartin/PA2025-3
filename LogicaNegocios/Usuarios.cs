@@ -47,9 +47,6 @@ namespace LogicaNegocios
             try
             {
                 Boolean resultado = false;
-
-
-
                 //Recoger datos del login
                 DataUsuario mUsuario = new DataUsuario();
                 mUsuario.Auntenticar(usuario, pwd);
