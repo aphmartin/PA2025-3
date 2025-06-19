@@ -31,3 +31,5 @@ C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\bin\Debu
 C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
 C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\obj\Debug\net8.0-windows\POS.sourcelink.json
 C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\obj\Debug\net8.0-windows\POS.frmBuscar.resources
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\obj\Debug\net8.0-windows\POS.frmProductos.resources
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\POS\obj\Debug\net8.0-windows\POS.frmVentas.resources

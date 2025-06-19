@@ -93,9 +93,39 @@ namespace POS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ico_productos {
+            get {
+                object obj = ResourceManager.GetObject("ico_productos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ico_salir {
             get {
                 object obj = ResourceManager.GetObject("ico_salir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ico_save {
+            get {
+                object obj = ResourceManager.GetObject("ico_save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ico_ventas {
+            get {
+                object obj = ResourceManager.GetObject("ico_ventas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

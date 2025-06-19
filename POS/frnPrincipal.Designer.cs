@@ -36,6 +36,7 @@
             operacionesToolStripMenuItem = new ToolStripMenuItem();
             reportesToolStripMenuItem = new ToolStripMenuItem();
             salirToolStripMenuItem = new ToolStripMenuItem();
+            ventasToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -74,9 +75,11 @@
             productosToolStripMenuItem.Name = "productosToolStripMenuItem";
             productosToolStripMenuItem.Size = new Size(224, 26);
             productosToolStripMenuItem.Text = "Productos";
+            productosToolStripMenuItem.Click += productosToolStripMenuItem_Click;
             // 
             // operacionesToolStripMenuItem
             // 
+            operacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ventasToolStripMenuItem });
             operacionesToolStripMenuItem.Name = "operacionesToolStripMenuItem";
             operacionesToolStripMenuItem.Size = new Size(106, 24);
             operacionesToolStripMenuItem.Text = "Operaciones";
@@ -93,6 +96,13 @@
             salirToolStripMenuItem.Size = new Size(52, 24);
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
+            // 
+            // ventasToolStripMenuItem
+            // 
+            ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
+            ventasToolStripMenuItem.Size = new Size(224, 26);
+            ventasToolStripMenuItem.Text = "Ventas";
+            ventasToolStripMenuItem.Click += ventasToolStripMenuItem_Click;
             // 
             // frnPrincipal
             // 
@@ -123,5 +133,6 @@
         private ToolStripMenuItem operacionesToolStripMenuItem;
         private ToolStripMenuItem reportesToolStripMenuItem;
         private ToolStripMenuItem salirToolStripMenuItem;
+        private ToolStripMenuItem ventasToolStripMenuItem;
     }
 }

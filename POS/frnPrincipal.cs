@@ -46,5 +46,19 @@ namespace POS
             frmUsuarios.Show(); // Mostrar el formulario de usuarios
 
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProductos frmProductos = new frmProductos();
+            frmProductos.MdiParent = this; // Establecer el formulario principal como padre
+            frmProductos.Show(); // Mostrar el formulario de productos
+        }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVentas frmVentas = new frmVentas();
+            frmVentas.MdiParent = this; // Establecer el formulario principal como padre
+            frmVentas.Show(); // Mostrar el formulario de ventas
+        }
     }
 }
