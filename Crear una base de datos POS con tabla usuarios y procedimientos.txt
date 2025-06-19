@@ -1,6 +1,9 @@
-create database POS
-go
+-- IMPORTANTE!! Primero Ejecuta la creacion de la base de datos, puedes seleccionar solo la linea 3 y 4 y ejecuta, despues comenta y ejecuta el resto
+--create database POS
+--go
+
 use POS
+go
 
 create table Usuarios
 (
@@ -10,18 +13,19 @@ apellidoP nvarchar (100),
 apellidoM nvarchar (100),
 correo nvarchar (100),
 usuario nvarchar (20),
-password nvarcha(20,
+password nvarchar (20),
 idPerfil int
 )
+go
 
 insert into Usuarios
 values
-('Martin','Anduaga','Pinto','martin.anduaga@ues.mx','martin','12345',1)
-
+('Martin','Anduaga','Pinto','martin.anduaga@ues.mx','martin','123456',1)
+go
 ---PROCEDIMIENTOS ALMACENADOS 
 create proc proc_ObtenerUsuarios
 as
-select * from Usuario
+select * from Usuarios
 go
 
 --INSERTAR 
@@ -31,10 +35,11 @@ create proc proc_InsertarUsuarios
 @apellidoM nvarchar (100),
 @correo nvarchar (100),
 @usuario nvarchar (20),
-@password nvarcha(20,
+@pwd nvarchar (20),
 @idPerfil int
 as
-insert into Usuario values (@nombre,@apellidoP,@apellidoM,@correo,@usuario, @pwd)
+INSERT INTO Usuarios (nombre, apellidoP, apellidoM, correo, usuario, password, idPerfil)
+VALUES (@nombre,@apellidoP,@apellidoM,@correo,@usuario, @pwd, @idPerfil)
 go
 
 --validar login
@@ -42,5 +47,5 @@ create proc proc_ValidaLogin
 @usuario nvarchar(20),
 @pwd nvarchar (20)
 as
-select * from Usuario where usuario=@usuario and password=@pwd
+select * from Usuarios where usuario=@usuario and password=@pwd
 go
