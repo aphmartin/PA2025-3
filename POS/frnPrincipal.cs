@@ -60,5 +60,12 @@ namespace POS
             frmVentas.MdiParent = this; // Establecer el formulario principal como padre
             frmVentas.Show(); // Mostrar el formulario de ventas
         }
+
+        private void corteDeCajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCorteCaja frmCorteCaja = new frmCorteCaja();
+            frmCorteCaja.MdiParent = this; // Establecer el formulario principal como padre
+            frmCorteCaja.Show(); // Mostrar el formulario de corte de caja
+        }
     }
 }
