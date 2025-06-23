@@ -59,7 +59,7 @@ namespace POS
             //llamar a la logica de negocio
             //validar usuario y contraseña
             //si todo es correcto, abrir el formulario principal
-            this.Close();
+            //this.Close();
 
 
         }

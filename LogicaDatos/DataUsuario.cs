@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//using Microsoft.Data.SqlClient; // Ensure you have the Microsoft.Data.SqlClient package installed
 
 namespace LogicaDatos
 {

@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+//using Microsoft.Data.SqlClient;
+
 
 namespace LogicaDatos
 {
@@ -13,7 +15,7 @@ namespace LogicaDatos
         SqlConnection conn;
         String nombreServidor = "DELL-MARTIN";
         String nombreBD = "POS";
-        String usuarioBD = "userpos";
+        String usuarioBD = "usuario_pos";
         String passwordBD = "ues2025";
         private String ConnectionString;
 
@@ -21,7 +23,7 @@ namespace LogicaDatos
         {
             try
             {
-                ConnectionString = $"Server={nombreServidor}; Database={nombreBD}; User Id={usuarioBD}; Password={passwordBD};";
+                ConnectionString = $"Server={nombreServidor}; Database={nombreBD}; User Id={usuarioBD}; Password={passwordBD};TrustServerCertificate=True;";
                 conn = new SqlConnection(ConnectionString);
 
             }

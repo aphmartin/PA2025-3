@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogicaNegocios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,8 +25,9 @@ namespace POS
                 this.Text = "Punto de Venta - " + Application.ProductVersion;
                 frmLogin loginForm = new frmLogin();
                 loginForm.ShowDialog();
-                MessageBox.Show("Bienvenido al sistema de Punto de Venta", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                //MessageBox.Show("Bienvenido al sistema de Punto de Venta", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                barra_nombre.Text = Utilerias.G_NombreUsuario; // Asignar el usuario logueado a la barra de estado
+                barra_version.Text = Application.ProductVersion; // Asignar la versión de la aplicación a la barra de estado
             }
             catch (Exception ex)
             {
@@ -66,6 +68,11 @@ namespace POS
             frmCorteCaja frmCorteCaja = new frmCorteCaja();
             frmCorteCaja.MdiParent = this; // Establecer el formulario principal como padre
             frmCorteCaja.Show(); // Mostrar el formulario de corte de caja
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

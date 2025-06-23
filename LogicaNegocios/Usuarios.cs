@@ -54,8 +54,8 @@ namespace LogicaNegocios
                 {
 
                     resultado = true;
-                    //Utilerias.G_NombreUsuario = mUsuario.NombreDeUsuario;
-                    //Utilerias.G_Usuario = mUsuario.UserName;
+                    Utilerias.G_NombreUsuario = mUsuario.NombreDeUsuario;
+                    Utilerias.G_Usuario = mUsuario.UserName;
                 }
                 else
                 {

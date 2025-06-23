@@ -35,10 +35,16 @@
             productosToolStripMenuItem = new ToolStripMenuItem();
             operacionesToolStripMenuItem = new ToolStripMenuItem();
             ventasToolStripMenuItem = new ToolStripMenuItem();
+            corteDeCajaToolStripMenuItem = new ToolStripMenuItem();
             reportesToolStripMenuItem = new ToolStripMenuItem();
             salirToolStripMenuItem = new ToolStripMenuItem();
-            corteDeCajaToolStripMenuItem = new ToolStripMenuItem();
+            statusStrip1 = new StatusStrip();
+            toolStripStatusLabel1 = new ToolStripStatusLabel();
+            barra_nombre = new ToolStripStatusLabel();
+            toolStripStatusLabel2 = new ToolStripStatusLabel();
+            barra_version = new ToolStripStatusLabel();
             menuStrip1.SuspendLayout();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -88,9 +94,16 @@
             // ventasToolStripMenuItem
             // 
             ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            ventasToolStripMenuItem.Size = new Size(224, 26);
+            ventasToolStripMenuItem.Size = new Size(182, 26);
             ventasToolStripMenuItem.Text = "Ventas";
             ventasToolStripMenuItem.Click += ventasToolStripMenuItem_Click;
+            // 
+            // corteDeCajaToolStripMenuItem
+            // 
+            corteDeCajaToolStripMenuItem.Name = "corteDeCajaToolStripMenuItem";
+            corteDeCajaToolStripMenuItem.Size = new Size(182, 26);
+            corteDeCajaToolStripMenuItem.Text = "Corte de Caja";
+            corteDeCajaToolStripMenuItem.Click += corteDeCajaToolStripMenuItem_Click;
             // 
             // reportesToolStripMenuItem
             // 
@@ -105,18 +118,47 @@
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
-            // corteDeCajaToolStripMenuItem
+            // statusStrip1
             // 
-            corteDeCajaToolStripMenuItem.Name = "corteDeCajaToolStripMenuItem";
-            corteDeCajaToolStripMenuItem.Size = new Size(224, 26);
-            corteDeCajaToolStripMenuItem.Text = "Corte de Caja";
-            corteDeCajaToolStripMenuItem.Click += corteDeCajaToolStripMenuItem_Click;
+            statusStrip1.ImageScalingSize = new Size(20, 20);
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, barra_nombre, toolStripStatusLabel2, barra_version });
+            statusStrip1.Location = new Point(0, 659);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(1129, 26);
+            statusStrip1.TabIndex = 3;
+            statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            toolStripStatusLabel1.Size = new Size(142, 20);
+            toolStripStatusLabel1.Text = "Nombre de Usuario:";
+            toolStripStatusLabel1.Click += toolStripStatusLabel1_Click;
+            // 
+            // barra_nombre
+            // 
+            barra_nombre.Name = "barra_nombre";
+            barra_nombre.Size = new Size(61, 20);
+            barra_nombre.Text = "nombre";
+            // 
+            // toolStripStatusLabel2
+            // 
+            toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            toolStripStatusLabel2.Size = new Size(854, 20);
+            toolStripStatusLabel2.Spring = true;
+            // 
+            // barra_version
+            // 
+            barra_version.Name = "barra_version";
+            barra_version.Size = new Size(57, 20);
+            barra_version.Text = "Version";
             // 
             // frnPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1129, 685);
+            Controls.Add(statusStrip1);
             Controls.Add(menuStrip1);
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
@@ -127,6 +169,8 @@
             Load += frnPrincipal_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -143,5 +187,10 @@
         private ToolStripMenuItem salirToolStripMenuItem;
         private ToolStripMenuItem ventasToolStripMenuItem;
         private ToolStripMenuItem corteDeCajaToolStripMenuItem;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel toolStripStatusLabel1;
+        private ToolStripStatusLabel barra_nombre;
+        private ToolStripStatusLabel toolStripStatusLabel2;
+        private ToolStripStatusLabel barra_version;
     }
 }
