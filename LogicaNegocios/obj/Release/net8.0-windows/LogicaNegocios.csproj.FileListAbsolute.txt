@@ -1,0 +1,16 @@
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\bin\Release\net8.0-windows\LogicaNegocios.deps.json
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\bin\Release\net8.0-windows\LogicaNegocios.dll
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\bin\Release\net8.0-windows\LogicaNegocios.pdb
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\bin\Release\net8.0-windows\LogicaDatos.dll
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\bin\Release\net8.0-windows\LogicaDatos.pdb
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\obj\Release\net8.0-windows\LogicaNegocios.csproj.AssemblyReference.cache
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\obj\Release\net8.0-windows\LogicaNegocios.GeneratedMSBuildEditorConfig.editorconfig
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\obj\Release\net8.0-windows\LogicaNegocios.AssemblyInfoInputs.cache
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\obj\Release\net8.0-windows\LogicaNegocios.AssemblyInfo.cs
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\obj\Release\net8.0-windows\LogicaNegocios.csproj.CoreCompileInputs.cache
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\obj\Release\net8.0-windows\LogicaNegocios.sourcelink.json
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\obj\Release\net8.0-windows\LogicaNe.CFB83674.Up2Date
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\obj\Release\net8.0-windows\LogicaNegocios.dll
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\obj\Release\net8.0-windows\refint\LogicaNegocios.dll
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\obj\Release\net8.0-windows\LogicaNegocios.pdb
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaNegocios\obj\Release\net8.0-windows\ref\LogicaNegocios.dll

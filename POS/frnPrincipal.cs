@@ -27,7 +27,7 @@ namespace POS
                 loginForm.ShowDialog();
                 //MessageBox.Show("Bienvenido al sistema de Punto de Venta", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 barra_nombre.Text = Utilerias.G_NombreUsuario; // Asignar el usuario logueado a la barra de estado
-                barra_version.Text = Application.ProductVersion; // Asignar la versión de la aplicación a la barra de estado
+                barra_version.Text = "Versión:" + Application.ProductVersion; // Asignar la versión de la aplicación a la barra de estado
             }
             catch (Exception ex)
             {

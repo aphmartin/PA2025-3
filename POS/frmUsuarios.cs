@@ -20,9 +20,9 @@ namespace POS
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //recolectar
+                //recolectar
             string id = txtID.Text;
-            String nombre = txtNombre.Text;
+            String nombre = txtNombre.Text; 
             String apellidoP = txtAp1.Text;
             String apellidoM = txtAp2.Text;
             String correo = txtCorreo.Text;
@@ -44,6 +44,7 @@ namespace POS
             if (objUsuario.fnGuardar()) //llamar a la logica de negocio
             {
                 MessageBox.Show("Usuario guardado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpiar(); //limpiar los campos
 
             }
             else
@@ -98,6 +99,25 @@ namespace POS
             }
 
 
+        }
+
+        private void frmUsuarios_Load(object sender, EventArgs e)
+        {
+            //Limpiar
+            Limpiar();
+
+        }
+
+        private void Limpiar()
+        {
+            txtID.Text = "0";
+            txtID.Enabled = true;
+            txtNombre.Text = "";
+            txtAp1.Text = "";
+            txtAp2.Text = "";
+            txtCorreo.Text = "";
+            txtPwd.Text = "";
+            txtUsuario.Text = "";
         }
     }
 }

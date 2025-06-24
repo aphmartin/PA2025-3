@@ -34,6 +34,7 @@
             panel2 = new Panel();
             btnGuardar = new Button();
             panel3 = new Panel();
+            btnBuscar = new Button();
             label8 = new Label();
             txtUsuario = new TextBox();
             txtPwd = new TextBox();
@@ -48,7 +49,6 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            btnBuscar = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -130,6 +130,17 @@
             panel3.Size = new Size(1008, 396);
             panel3.TabIndex = 2;
             // 
+            // btnBuscar
+            // 
+            btnBuscar.BackgroundImage = Properties.Resources.ico_lupa;
+            btnBuscar.BackgroundImageLayout = ImageLayout.Zoom;
+            btnBuscar.Location = new Point(419, 34);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(52, 32);
+            btnBuscar.TabIndex = 1;
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
+            // 
             // label8
             // 
             label8.AutoSize = true;
@@ -145,49 +156,49 @@
             txtUsuario.Location = new Point(283, 252);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(343, 27);
-            txtUsuario.TabIndex = 12;
+            txtUsuario.TabIndex = 6;
             // 
             // txtPwd
             // 
             txtPwd.Location = new Point(283, 293);
             txtPwd.Name = "txtPwd";
             txtPwd.Size = new Size(343, 27);
-            txtPwd.TabIndex = 11;
+            txtPwd.TabIndex = 7;
             // 
             // txtCorreo
             // 
             txtCorreo.Location = new Point(283, 210);
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(343, 27);
-            txtCorreo.TabIndex = 10;
+            txtCorreo.TabIndex = 5;
             // 
             // txtNombre
             // 
             txtNombre.Location = new Point(283, 78);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(343, 27);
-            txtNombre.TabIndex = 9;
+            txtNombre.TabIndex = 2;
             // 
             // txtAp1
             // 
             txtAp1.Location = new Point(283, 122);
             txtAp1.Name = "txtAp1";
             txtAp1.Size = new Size(343, 27);
-            txtAp1.TabIndex = 8;
+            txtAp1.TabIndex = 3;
             // 
             // txtAp2
             // 
             txtAp2.Location = new Point(283, 166);
             txtAp2.Name = "txtAp2";
             txtAp2.Size = new Size(343, 27);
-            txtAp2.TabIndex = 7;
+            txtAp2.TabIndex = 4;
             // 
             // txtID
             // 
             txtID.Location = new Point(283, 34);
             txtID.Name = "txtID";
             txtID.Size = new Size(125, 27);
-            txtID.TabIndex = 6;
+            txtID.TabIndex = 0;
             // 
             // label7
             // 
@@ -243,17 +254,6 @@
             label2.TabIndex = 0;
             label2.Text = "Folio";
             // 
-            // btnBuscar
-            // 
-            btnBuscar.BackgroundImage = Properties.Resources.ico_lupa;
-            btnBuscar.BackgroundImageLayout = ImageLayout.Zoom;
-            btnBuscar.Location = new Point(419, 34);
-            btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(52, 32);
-            btnBuscar.TabIndex = 14;
-            btnBuscar.UseVisualStyleBackColor = true;
-            btnBuscar.Click += btnBuscar_Click;
-            // 
             // frmUsuarios
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -262,9 +262,11 @@
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "frmUsuarios";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmUsuarios";
+            Load += frmUsuarios_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

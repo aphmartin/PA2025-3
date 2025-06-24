@@ -1,0 +1,13 @@
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\bin\Release\net8.0-windows\LogicaDatos.deps.json
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\bin\Release\net8.0-windows\LogicaDatos.dll
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\bin\Release\net8.0-windows\LogicaDatos.pdb
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\obj\Release\net8.0-windows\LogicaDatos.csproj.AssemblyReference.cache
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\obj\Release\net8.0-windows\LogicaDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\obj\Release\net8.0-windows\LogicaDatos.AssemblyInfoInputs.cache
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\obj\Release\net8.0-windows\LogicaDatos.AssemblyInfo.cs
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\obj\Release\net8.0-windows\LogicaDatos.csproj.CoreCompileInputs.cache
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\obj\Release\net8.0-windows\LogicaDatos.sourcelink.json
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\obj\Release\net8.0-windows\LogicaDatos.dll
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\obj\Release\net8.0-windows\refint\LogicaDatos.dll
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\obj\Release\net8.0-windows\LogicaDatos.pdb
+C:\CodeProjects\clases_ues\ProgramacionAplicada\2025-3\SOLUCION_POS\LogicaDatos\obj\Release\net8.0-windows\ref\LogicaDatos.dll

@@ -155,8 +155,10 @@
             // 
             // frmLogin
             // 
+            AcceptButton = btnIngresar;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            CancelButton = btnCerrar;
             ClientSize = new Size(779, 382);
             Controls.Add(panel2);
             Controls.Add(panel1);
