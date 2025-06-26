@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnCerrar = new Button();
             pictureBox1 = new PictureBox();
             label1 = new Label();
             panel2 = new Panel();
-            btnGuardar = new Button();
+            btnCancelar = new Button();
+            btnAccion = new Button();
             panel3 = new Panel();
             btnBuscar = new Button();
             label8 = new Label();
@@ -58,13 +60,24 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(btnCerrar);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1008, 97);
+            panel1.Size = new Size(736, 97);
             panel1.TabIndex = 0;
+            // 
+            // btnCerrar
+            // 
+            btnCerrar.Image = Properties.Resources.ico_salir_2;
+            btnCerrar.Location = new Point(646, 23);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new Size(48, 54);
+            btnCerrar.TabIndex = 3;
+            btnCerrar.UseVisualStyleBackColor = true;
+            btnCerrar.Click += btnCerrar_Click;
             // 
             // pictureBox1
             // 
@@ -89,22 +102,39 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.Controls.Add(btnGuardar);
+            panel2.Controls.Add(btnCancelar);
+            panel2.Controls.Add(btnAccion);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 493);
+            panel2.Location = new Point(0, 497);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1008, 59);
+            panel2.Size = new Size(736, 90);
             panel2.TabIndex = 1;
             // 
-            // btnGuardar
+            // btnCancelar
             // 
-            btnGuardar.Location = new Point(835, 18);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(94, 29);
-            btnGuardar.TabIndex = 0;
-            btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = true;
-            btnGuardar.Click += btnGuardar_Click;
+            btnCancelar.Image = Properties.Resources.ico_limpiar;
+            btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCancelar.Location = new Point(529, 19);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(129, 53);
+            btnCancelar.TabIndex = 3;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.TextAlign = ContentAlignment.MiddleRight;
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
+            // btnAccion
+            // 
+            btnAccion.Image = Properties.Resources.ico_save;
+            btnAccion.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAccion.Location = new Point(373, 19);
+            btnAccion.Name = "btnAccion";
+            btnAccion.Size = new Size(139, 53);
+            btnAccion.TabIndex = 2;
+            btnAccion.Text = "Guardar";
+            btnAccion.TextAlign = ContentAlignment.MiddleRight;
+            btnAccion.UseVisualStyleBackColor = true;
+            btnAccion.Click += button1_Click;
             // 
             // panel3
             // 
@@ -127,7 +157,7 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 97);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1008, 396);
+            panel3.Size = new Size(736, 400);
             panel3.TabIndex = 2;
             // 
             // btnBuscar
@@ -258,11 +288,11 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1008, 552);
+            ClientSize = new Size(736, 587);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmUsuarios";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmUsuarios";
@@ -282,7 +312,6 @@
         private Panel panel2;
         private PictureBox pictureBox1;
         private Label label1;
-        private Button btnGuardar;
         private Panel panel3;
         private TextBox txtPwd;
         private TextBox txtCorreo;
@@ -299,5 +328,8 @@
         private TextBox txtUsuario;
         private Label label8;
         private Button btnBuscar;
+        private Button btnCerrar;
+        private Button btnCancelar;
+        private Button btnAccion;
     }
 }

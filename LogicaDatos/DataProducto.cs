@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,8 @@ namespace LogicaDatos
         public int renglonesAfectados = 0;
 
 
-        public int Insertar(string clave, string nombre, string descripcion, string unidadMedida)
+        public int Insertar(string clave, string nombre, string descripcion, string unidadMedida, int existencia, 
+            decimal precioCompra, decimal precioVenta, String ubicacion, int minimo, int maximo)
         {
             try
             {
@@ -35,6 +37,13 @@ namespace LogicaDatos
                 comandoSQL.Parameters.AddWithValue("@nombre", nombre);
                 comandoSQL.Parameters.AddWithValue("@descripcion", descripcion);
                 comandoSQL.Parameters.AddWithValue("@unidadmedida", unidadMedida);
+                comandoSQL.Parameters.AddWithValue("@existencia", existencia);
+                comandoSQL.Parameters.AddWithValue("@preciocompra", precioCompra);
+                comandoSQL.Parameters.AddWithValue("@precioventa", precioVenta);
+                comandoSQL.Parameters.AddWithValue("@ubicacion", ubicacion);
+                comandoSQL.Parameters.AddWithValue("@minimo", minimo);
+                comandoSQL.Parameters.AddWithValue("@maximo", maximo);
+
 
                 //Ejecutar query
                 comandoSQL.ExecuteNonQuery();
@@ -60,5 +69,46 @@ namespace LogicaDatos
 
         }
 
+        public DataTable BuscarPorId(int idProducto)
+        {
+            try
+            {
+                DataTable consultaData = new DataTable();
+
+                //Abrir conexion
+                comandoSQL.Connection = connSQL.AbrirConexion();
+
+                comandoSQL.CommandText = "SELECT * FROM PRODUCTOS WHERE IDK="+idProducto;
+                comandoSQL.CommandType = CommandType.Text;
+
+                //obtener un datareader
+                SqlDataAdapter adaptador = new SqlDataAdapter(comandoSQL);
+                //Llenar el datatable con los datos obtenidos
+                adaptador.Fill(consultaData);
+                //validar si tiene datos el datatable
+                if (consultaData.Rows.Count > 0)
+                {
+                    renglonesAfectados = consultaData.Rows.Count;
+                }
+                else
+                {
+                    renglonesAfectados = 0;
+                }
+
+
+
+
+                connSQL.CerrarConexion();
+                //Cerrar conexion
+                return consultaData;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("DataProducto: BuscarPorId" + ex.Message);
+                renglonesAfectados = 0;
+                return null;
+            }
+        }
     }
 }

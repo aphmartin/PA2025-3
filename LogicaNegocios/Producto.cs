@@ -1,6 +1,7 @@
 ﻿using LogicaDatos;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,10 +63,40 @@ namespace LogicaNegocios
         {
             // Lógica para guardar el producto en la base de datos
             DataProducto dataProducto = new DataProducto();
-            return dataProducto.Insertar(clave, nombre, descripcion, unidadMedida)>0;
+            return dataProducto.Insertar(clave, nombre, descripcion, unidadMedida,existencia,precioCompra,precioVenta,ubicacion,minimo,maximo)>0;
        
         }
 
+        public bool fnBuscarPorId()
+        {
+            // Lógica para buscar un producto por su ID
+            DataProducto dataProducto = new DataProducto();
+            DataTable productoEncontrado = dataProducto.BuscarPorId(idProducto);
+            if (productoEncontrado != null)
+            {
+                // Asignar los valores del producto encontrado a las propiedades de la clase
+                this.idProducto = Convert.ToInt32( productoEncontrado.Rows[0]["idProducto"]);
+                this.clave = productoEncontrado.Rows[0]["clave"].ToString();
+                this.nombre = productoEncontrado.Rows[0]["nombre"].ToString();
+                this.descripcion = productoEncontrado.Rows[0]["descripcion"].ToString();
+                this.precioCompra = Convert.ToDecimal( productoEncontrado.Rows[0]["precioCompra"]);
+                this.precioVenta = Convert.ToDecimal(productoEncontrado.Rows[0]["precioVenta"]);
+                this.existencia = Convert.ToInt32(productoEncontrado.Rows[0]["existencia"]);
+                this.ubicacion = productoEncontrado.Rows[0]["ubicacion"].ToString();
+                this.unidadMedida = productoEncontrado.Rows[0]["unidadMedida"].ToString();
+                this.minimo = Convert.ToInt32(productoEncontrado.Rows[0]["minimo"]);
+                this.maximo = Convert.ToInt32(productoEncontrado.Rows[0]["maximo"]);
 
+                return true; // Producto encontrado y asignado correctamente
+            }
+            else { 
+            return false;
+        }
+        }
+
+        public bool fnActualizar()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

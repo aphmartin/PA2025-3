@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -88,7 +89,7 @@ namespace LogicaNegocios
             {
                 Boolean resultado = false;
                 DataUsuario vUsuario = new DataUsuario();
-                vUsuario.Insertar(nombre, apellidoP, apellidoM, correo, usuario, pwd, telefono, clave);
+                vUsuario.Insertar(nombre, apellidoP, apellidoM, correo, usuario, pwd);
                 if (vUsuario.renglonesAfectados > 0)
                 {
                     resultado = true;
@@ -100,6 +101,43 @@ namespace LogicaNegocios
                 Console.WriteLine(e.ToString());
                 return false;
             }
+        }
+
+        public bool fnBuscarPorID()
+        {
+            //logica para buscar un usuario por ID
+            try
+            {
+                DataUsuario vUsuario = new DataUsuario();
+                DataTable datoUsuario=vUsuario.BuscarPorID(clave);
+                if (datoUsuario != null)
+                {
+                    this.clave = Convert.ToInt32(datoUsuario.Rows[0]["idk"]);
+                    this.nombre = datoUsuario.Rows[0]["nombre"].ToString();
+                    this.apellidoP = datoUsuario.Rows[0]["apellidoP"].ToString();
+                    this.apellidoM = datoUsuario.Rows[0]["apellidoM"].ToString();
+                    this.correo = datoUsuario.Rows[0]["correo"].ToString();
+                    this.usuario = datoUsuario.Rows[0]["usuario"].ToString();
+                    this.pwd = datoUsuario.Rows[0]["password"].ToString();
+                    
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("[fnBuscarPorID] " + e.ToString());
+                return false;
+            }
+
+        }
+
+        public bool fnActualizar()
+        {
+            throw new NotImplementedException();
         }
     }
 

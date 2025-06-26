@@ -73,6 +73,16 @@ namespace POS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ico_limpiar {
+            get {
+                object obj = ResourceManager.GetObject("ico_limpiar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ico_login {
             get {
                 object obj = ResourceManager.GetObject("ico_login", resourceCulture);
@@ -106,6 +116,16 @@ namespace POS.Properties {
         internal static System.Drawing.Bitmap ico_salir {
             get {
                 object obj = ResourceManager.GetObject("ico_salir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ico_salir_2 {
+            get {
+                object obj = ResourceManager.GetObject("ico_salir_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

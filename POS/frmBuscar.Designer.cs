@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label1 = new Label();
-            txtBuscar = new TextBox();
             btnFiltrar = new Button();
+            txtBuscar = new TextBox();
+            label1 = new Label();
             dGV_datos = new DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dGV_datos).BeginInit();
@@ -49,22 +49,6 @@
             panel1.Size = new Size(754, 105);
             panel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(40, 24);
-            label1.Name = "label1";
-            label1.Size = new Size(104, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Texto a buscar";
-            // 
-            // txtBuscar
-            // 
-            txtBuscar.Location = new Point(40, 49);
-            txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(469, 27);
-            txtBuscar.TabIndex = 1;
-            // 
             // btnFiltrar
             // 
             btnFiltrar.Location = new Point(546, 48);
@@ -73,6 +57,22 @@
             btnFiltrar.TabIndex = 2;
             btnFiltrar.Text = "Filtrar";
             btnFiltrar.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscar
+            // 
+            txtBuscar.Location = new Point(40, 49);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.Size = new Size(469, 27);
+            txtBuscar.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(40, 24);
+            label1.Name = "label1";
+            label1.Size = new Size(104, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Texto a buscar";
             // 
             // dGV_datos
             // 
@@ -86,6 +86,7 @@
             dGV_datos.RowHeadersWidth = 51;
             dGV_datos.Size = new Size(754, 500);
             dGV_datos.TabIndex = 1;
+            dGV_datos.CellDoubleClick += dGV_datos_CellDoubleClick;
             // 
             // frmBuscar
             // 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace LogicaDatos
         public String NombreDeUsuario = "";
         public String UserName = "";
 
-        public void Insertar(String nombre, String apellidoP, String apellidoM, String correo, String usuario, String password, String telefono, int perfil)
+        public void Insertar(String nombre, String apellidoP, String apellidoM, String correo, String usuario, String password)
         {
             try
             {
@@ -27,20 +28,19 @@ namespace LogicaDatos
                 comandoSQL.Connection = connSQL.AbrirConexion();
 
                 //Enviar nombre de recursos sql
-                comandoSQL.CommandText = "proc_InsertarUsuarios";
+                comandoSQL.CommandText = "proc_InsertarUsuario";
 
                 //Tipo de comando
                 comandoSQL.CommandType = System.Data.CommandType.StoredProcedure;
-
+                comandoSQL.Parameters.Clear();
                 //Agregar parametro
-                comandoSQL.Parameters.AddWithValue("@nombre", nombre);
-                comandoSQL.Parameters.AddWithValue("@apellidop", apellidoP);
-                comandoSQL.Parameters.AddWithValue("@apellidom", apellidoM);
-                comandoSQL.Parameters.AddWithValue("@correo", correo);
-                comandoSQL.Parameters.AddWithValue("@usuario", usuario);
-                comandoSQL.Parameters.AddWithValue("@password", password);
-                comandoSQL.Parameters.AddWithValue("@telefono", telefono);
-                comandoSQL.Parameters.AddWithValue("@idPerfil", perfil);
+                comandoSQL.Parameters.AddWithValue("@NOMBRE", nombre);
+                comandoSQL.Parameters.AddWithValue("@AP1", apellidoP);
+                comandoSQL.Parameters.AddWithValue("@AP2", apellidoM);
+                comandoSQL.Parameters.AddWithValue("@EMAIL", correo);
+                comandoSQL.Parameters.AddWithValue("@USER", usuario);
+                comandoSQL.Parameters.AddWithValue("@PASSWORD", password);
+
 
                 //Ejecutar query
                 comandoSQL.ExecuteNonQuery();
@@ -111,8 +111,44 @@ namespace LogicaDatos
 
         }
 
+        public DataTable BuscarPorID(int id)
+        {
+            try
+            {
+                DataTable consultaData = new DataTable();
 
+                //Abrir conexion
+                comandoSQL.Connection = connSQL.AbrirConexion();
 
+                comandoSQL.CommandText = "SELECT * FROM USUARIOS WHERE IDK=" + id;
+                comandoSQL.CommandType = CommandType.Text;
+
+                //obtener un datareader
+                SqlDataAdapter adaptador = new SqlDataAdapter(comandoSQL);
+                //Llenar el datatable con los datos obtenidos
+                adaptador.Fill(consultaData);
+                //validar si tiene datos el datatable
+                if (consultaData.Rows.Count > 0)
+                {
+                    renglonesAfectados = consultaData.Rows.Count;
+                }
+                else
+                {
+                    renglonesAfectados = 0;
+                }
+
+                connSQL.CerrarConexion();
+                //Cerrar conexion
+                return consultaData;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("DataProducto: BuscarPorId" + ex.Message);
+                renglonesAfectados = 0;
+                return null;
+            }
+        }
     }
 
 

@@ -29,25 +29,27 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnCerrar = new Button();
             pictureBox1 = new PictureBox();
             label1 = new Label();
             panel2 = new Panel();
+            btnCancelar = new Button();
             btnGuardar = new Button();
             panel3 = new Panel();
             btnBuscar = new Button();
-            textBox13 = new TextBox();
-            textBox12 = new TextBox();
-            textBox11 = new TextBox();
-            textBox10 = new TextBox();
-            textBox9 = new TextBox();
+            txtMaximo = new TextBox();
+            txtMinimo = new TextBox();
+            txtExistencia = new TextBox();
+            txtPrecioVenta = new TextBox();
+            txtPrecioCompra = new TextBox();
             label12 = new Label();
             label11 = new Label();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
+            txtUbicacion = new TextBox();
+            txtMedida = new TextBox();
             txtDescripcion = new TextBox();
             txtNombre = new TextBox();
             txtClave = new TextBox();
@@ -66,13 +68,24 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(btnCerrar);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1046, 109);
+            panel1.Size = new Size(883, 109);
             panel1.TabIndex = 0;
+            // 
+            // btnCerrar
+            // 
+            btnCerrar.Image = Properties.Resources.ico_salir_2;
+            btnCerrar.Location = new Point(823, 25);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new Size(48, 54);
+            btnCerrar.TabIndex = 2;
+            btnCerrar.UseVisualStyleBackColor = true;
+            btnCerrar.Click += btnCerrar_Click;
             // 
             // pictureBox1
             // 
@@ -97,20 +110,34 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(btnCancelar);
             panel2.Controls.Add(btnGuardar);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 516);
+            panel2.Location = new Point(0, 541);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1046, 80);
+            panel2.Size = new Size(883, 80);
             panel2.TabIndex = 1;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Image = Properties.Resources.ico_limpiar;
+            btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCancelar.Location = new Point(712, 15);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(129, 53);
+            btnCancelar.TabIndex = 1;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.TextAlign = ContentAlignment.MiddleRight;
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnGuardar
             // 
             btnGuardar.Image = Properties.Resources.ico_save;
             btnGuardar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGuardar.Location = new Point(899, 15);
+            btnGuardar.Location = new Point(542, 15);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(119, 44);
+            btnGuardar.Size = new Size(139, 53);
             btnGuardar.TabIndex = 0;
             btnGuardar.Text = "Guardar";
             btnGuardar.TextAlign = ContentAlignment.MiddleRight;
@@ -121,19 +148,19 @@
             // 
             panel3.BackColor = Color.AliceBlue;
             panel3.Controls.Add(btnBuscar);
-            panel3.Controls.Add(textBox13);
-            panel3.Controls.Add(textBox12);
-            panel3.Controls.Add(textBox11);
-            panel3.Controls.Add(textBox10);
-            panel3.Controls.Add(textBox9);
+            panel3.Controls.Add(txtMaximo);
+            panel3.Controls.Add(txtMinimo);
+            panel3.Controls.Add(txtExistencia);
+            panel3.Controls.Add(txtPrecioVenta);
+            panel3.Controls.Add(txtPrecioCompra);
             panel3.Controls.Add(label12);
             panel3.Controls.Add(label11);
             panel3.Controls.Add(label10);
             panel3.Controls.Add(label9);
             panel3.Controls.Add(label8);
             panel3.Controls.Add(label7);
-            panel3.Controls.Add(textBox6);
-            panel3.Controls.Add(textBox5);
+            panel3.Controls.Add(txtUbicacion);
+            panel3.Controls.Add(txtMedida);
             panel3.Controls.Add(txtDescripcion);
             panel3.Controls.Add(txtNombre);
             panel3.Controls.Add(txtClave);
@@ -146,7 +173,7 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 109);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1046, 407);
+            panel3.Size = new Size(883, 432);
             panel3.TabIndex = 2;
             // 
             // btnBuscar
@@ -160,40 +187,40 @@
             btnBuscar.UseVisualStyleBackColor = true;
             btnBuscar.Click += btnBuscar_Click;
             // 
-            // textBox13
+            // txtMaximo
             // 
-            textBox13.Location = new Point(248, 351);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(401, 27);
-            textBox13.TabIndex = 23;
+            txtMaximo.Location = new Point(248, 351);
+            txtMaximo.Name = "txtMaximo";
+            txtMaximo.Size = new Size(401, 27);
+            txtMaximo.TabIndex = 23;
             // 
-            // textBox12
+            // txtMinimo
             // 
-            textBox12.Location = new Point(248, 318);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(401, 27);
-            textBox12.TabIndex = 22;
+            txtMinimo.Location = new Point(248, 318);
+            txtMinimo.Name = "txtMinimo";
+            txtMinimo.Size = new Size(401, 27);
+            txtMinimo.TabIndex = 22;
             // 
-            // textBox11
+            // txtExistencia
             // 
-            textBox11.Location = new Point(247, 285);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(401, 27);
-            textBox11.TabIndex = 21;
+            txtExistencia.Location = new Point(247, 285);
+            txtExistencia.Name = "txtExistencia";
+            txtExistencia.Size = new Size(401, 27);
+            txtExistencia.TabIndex = 21;
             // 
-            // textBox10
+            // txtPrecioVenta
             // 
-            textBox10.Location = new Point(247, 252);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(401, 27);
-            textBox10.TabIndex = 20;
+            txtPrecioVenta.Location = new Point(247, 252);
+            txtPrecioVenta.Name = "txtPrecioVenta";
+            txtPrecioVenta.Size = new Size(401, 27);
+            txtPrecioVenta.TabIndex = 20;
             // 
-            // textBox9
+            // txtPrecioCompra
             // 
-            textBox9.Location = new Point(247, 219);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(401, 27);
-            textBox9.TabIndex = 19;
+            txtPrecioCompra.Location = new Point(247, 219);
+            txtPrecioCompra.Name = "txtPrecioCompra";
+            txtPrecioCompra.Size = new Size(401, 27);
+            txtPrecioCompra.TabIndex = 19;
             // 
             // label12
             // 
@@ -249,19 +276,19 @@
             label7.TabIndex = 11;
             label7.Text = "Precio Venta";
             // 
-            // textBox6
+            // txtUbicacion
             // 
-            textBox6.Location = new Point(247, 186);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(401, 27);
-            textBox6.TabIndex = 10;
+            txtUbicacion.Location = new Point(247, 186);
+            txtUbicacion.Name = "txtUbicacion";
+            txtUbicacion.Size = new Size(401, 27);
+            txtUbicacion.TabIndex = 10;
             // 
-            // textBox5
+            // txtMedida
             // 
-            textBox5.Location = new Point(247, 153);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(401, 27);
-            textBox5.TabIndex = 9;
+            txtMedida.Location = new Point(247, 153);
+            txtMedida.Name = "txtMedida";
+            txtMedida.Size = new Size(401, 27);
+            txtMedida.TabIndex = 9;
             // 
             // txtDescripcion
             // 
@@ -340,12 +367,15 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1046, 596);
+            ClientSize = new Size(883, 621);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmProductos";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmProductos";
+            Load += frmProductos_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -363,8 +393,8 @@
         private Panel panel2;
         private Button btnGuardar;
         private Panel panel3;
-        private TextBox textBox6;
-        private TextBox textBox5;
+        private TextBox txtUbicacion;
+        private TextBox txtMedida;
         private TextBox txtDescripcion;
         private TextBox txtNombre;
         private TextBox txtClave;
@@ -374,11 +404,11 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private TextBox textBox13;
-        private TextBox textBox12;
-        private TextBox textBox11;
-        private TextBox textBox10;
-        private TextBox textBox9;
+        private TextBox txtMaximo;
+        private TextBox txtMinimo;
+        private TextBox txtExistencia;
+        private TextBox txtPrecioVenta;
+        private TextBox txtPrecioCompra;
         private Label label12;
         private Label label11;
         private Label label10;
@@ -386,5 +416,7 @@
         private Label label8;
         private Label label7;
         private Button btnBuscar;
+        private Button btnCancelar;
+        private Button btnCerrar;
     }
 }

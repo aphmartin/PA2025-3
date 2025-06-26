@@ -1,40 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{44ABF666-83A1-4F24-AC6E-057C5228D80F}|POS\\POS.csproj|c:\\codeprojects\\clases_ues\\programacionaplicada\\2025-3\\solucion_pos\\pos\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{44ABF666-83A1-4F24-AC6E-057C5228D80F}|POS\\POS.csproj|solutionrelative:pos\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44ABF666-83A1-4F24-AC6E-057C5228D80F}|POS\\POS.csproj|c:\\codeprojects\\clases_ues\\programacionaplicada\\2025-3\\solucion_pos\\pos\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44ABF666-83A1-4F24-AC6E-057C5228D80F}|POS\\POS.csproj|solutionrelative:pos\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44ABF666-83A1-4F24-AC6E-057C5228D80F}|POS\\POS.csproj|c:\\codeprojects\\clases_ues\\programacionaplicada\\2025-3\\solucion_pos\\pos\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{44ABF666-83A1-4F24-AC6E-057C5228D80F}|POS\\POS.csproj|solutionrelative:pos\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44ABF666-83A1-4F24-AC6E-057C5228D80F}|POS\\POS.csproj|c:\\codeprojects\\clases_ues\\programacionaplicada\\2025-3\\solucion_pos\\pos\\frnprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44ABF666-83A1-4F24-AC6E-057C5228D80F}|POS\\POS.csproj|solutionrelative:pos\\frnprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44ABF666-83A1-4F24-AC6E-057C5228D80F}|POS\\POS.csproj|c:\\codeprojects\\clases_ues\\programacionaplicada\\2025-3\\solucion_pos\\pos\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44ABF666-83A1-4F24-AC6E-057C5228D80F}|POS\\POS.csproj|solutionrelative:pos\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C0D7E111-E353-47D8-8A4D-0480EDE411B9}|LogicaDatos\\LogicaDatos.csproj|c:\\codeprojects\\clases_ues\\programacionaplicada\\2025-3\\solucion_pos\\logicadatos\\conexionsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0D7E111-E353-47D8-8A4D-0480EDE411B9}|LogicaDatos\\LogicaDatos.csproj|solutionrelative:logicadatos\\conexionsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44ABF666-83A1-4F24-AC6E-057C5228D80F}|POS\\POS.csproj|c:\\codeprojects\\clases_ues\\programacionaplicada\\2025-3\\solucion_pos\\pos\\frnprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{44ABF666-83A1-4F24-AC6E-057C5228D80F}|POS\\POS.csproj|solutionrelative:pos\\frnprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44ABF666-83A1-4F24-AC6E-057C5228D80F}|POS\\POS.csproj|c:\\codeprojects\\clases_ues\\programacionaplicada\\2025-3\\solucion_pos\\pos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44ABF666-83A1-4F24-AC6E-057C5228D80F}|POS\\POS.csproj|solutionrelative:pos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -42,112 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmUsuarios.cs",
-              "DocumentMoniker": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\POS\\frmUsuarios.cs",
-              "RelativeDocumentMoniker": "POS\\frmUsuarios.cs",
-              "ToolTip": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\POS\\frmUsuarios.cs",
-              "RelativeToolTip": "POS\\frmUsuarios.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAswCgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T18:48:29.75Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmUsuarios.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\POS\\frmUsuarios.cs",
-              "RelativeDocumentMoniker": "POS\\frmUsuarios.cs",
-              "ToolTip": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\POS\\frmUsuarios.cs [Dise\u00F1o]",
-              "RelativeToolTip": "POS\\frmUsuarios.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T18:59:16.069Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ConexionSQL.cs",
-              "DocumentMoniker": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\LogicaDatos\\ConexionSQL.cs",
-              "RelativeDocumentMoniker": "LogicaDatos\\ConexionSQL.cs",
-              "ToolTip": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\LogicaDatos\\ConexionSQL.cs",
-              "RelativeToolTip": "LogicaDatos\\ConexionSQL.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAASwBwAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T18:48:40.753Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmLogin.cs",
-              "DocumentMoniker": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\POS\\frmLogin.cs",
-              "RelativeDocumentMoniker": "POS\\frmLogin.cs",
-              "ToolTip": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\POS\\frmLogin.cs",
-              "RelativeToolTip": "POS\\frmLogin.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAawCkAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T18:39:53.024Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmLogin.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\POS\\frmLogin.cs",
-              "RelativeDocumentMoniker": "POS\\frmLogin.cs",
-              "ToolTip": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\POS\\frmLogin.cs [Dise\u00F1o]",
-              "RelativeToolTip": "POS\\frmLogin.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T18:39:50.602Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frnPrincipal.cs",
-              "DocumentMoniker": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\POS\\frnPrincipal.cs",
-              "RelativeDocumentMoniker": "POS\\frnPrincipal.cs",
-              "ToolTip": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\POS\\frnPrincipal.cs",
-              "RelativeToolTip": "POS\\frnPrincipal.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAawCAAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T18:37:08.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frnPrincipal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\POS\\frnPrincipal.cs",
-              "RelativeDocumentMoniker": "POS\\frnPrincipal.cs",
-              "ToolTip": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\POS\\frnPrincipal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "POS\\frnPrincipal.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T18:33:37.833Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\POS\\Program.cs",
-              "RelativeDocumentMoniker": "POS\\Program.cs",
-              "ToolTip": "C:\\CodeProjects\\clases_ues\\ProgramacionAplicada\\2025-3\\SOLUCION_POS\\POS\\Program.cs",
-              "RelativeToolTip": "POS\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T18:32:55.603Z",
-              "EditorCaption": ""
             }
           ]
         }
