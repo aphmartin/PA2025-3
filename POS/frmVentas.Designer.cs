@@ -34,11 +34,11 @@
             panel2 = new Panel();
             btnBuscar = new Button();
             btnAgregar = new Button();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtImporte = new TextBox();
+            txtCantidad = new TextBox();
+            txtPrecio = new TextBox();
+            txtNombre = new TextBox();
+            txtClave = new TextBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
@@ -46,16 +46,16 @@
             label2 = new Label();
             panel3 = new Panel();
             button1 = new Button();
-            textBox6 = new TextBox();
+            txtTotal = new TextBox();
             label7 = new Label();
             panel4 = new Panel();
-            dataGridView1 = new DataGridView();
+            dgvProductos = new DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -94,11 +94,11 @@
             panel2.BackColor = Color.AliceBlue;
             panel2.Controls.Add(btnBuscar);
             panel2.Controls.Add(btnAgregar);
-            panel2.Controls.Add(textBox5);
-            panel2.Controls.Add(textBox4);
-            panel2.Controls.Add(textBox3);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(txtImporte);
+            panel2.Controls.Add(txtCantidad);
+            panel2.Controls.Add(txtPrecio);
+            panel2.Controls.Add(txtNombre);
+            panel2.Controls.Add(txtClave);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(label4);
@@ -116,53 +116,61 @@
             btnBuscar.BackgroundImageLayout = ImageLayout.Zoom;
             btnBuscar.Location = new Point(363, 7);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(62, 29);
+            btnBuscar.Size = new Size(50, 29);
             btnBuscar.TabIndex = 11;
             btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(445, 115);
+            btnAgregar.Location = new Point(386, 81);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(94, 29);
+            btnAgregar.Size = new Size(153, 80);
             btnAgregar.TabIndex = 10;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
-            // textBox5
+            // txtImporte
             // 
-            textBox5.Location = new Point(232, 134);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(125, 27);
-            textBox5.TabIndex = 9;
+            txtImporte.Location = new Point(232, 134);
+            txtImporte.Name = "txtImporte";
+            txtImporte.ReadOnly = true;
+            txtImporte.Size = new Size(125, 27);
+            txtImporte.TabIndex = 9;
             // 
-            // textBox4
+            // txtCantidad
             // 
-            textBox4.Location = new Point(232, 103);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
-            textBox4.TabIndex = 8;
+            txtCantidad.Location = new Point(232, 103);
+            txtCantidad.Name = "txtCantidad";
+            txtCantidad.Size = new Size(125, 27);
+            txtCantidad.TabIndex = 8;
+            txtCantidad.KeyPress += txtCantidad_KeyPress;
+            txtCantidad.KeyUp += txtCantidad_KeyUp;
             // 
-            // textBox3
+            // txtPrecio
             // 
-            textBox3.Location = new Point(232, 74);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 7;
+            txtPrecio.Location = new Point(232, 74);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.ReadOnly = true;
+            txtPrecio.Size = new Size(125, 27);
+            txtPrecio.TabIndex = 7;
             // 
-            // textBox2
+            // txtNombre
             // 
-            textBox2.Location = new Point(232, 41);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(307, 27);
-            textBox2.TabIndex = 6;
+            txtNombre.Location = new Point(232, 41);
+            txtNombre.Name = "txtNombre";
+            txtNombre.ReadOnly = true;
+            txtNombre.Size = new Size(307, 27);
+            txtNombre.TabIndex = 6;
             // 
-            // textBox1
+            // txtClave
             // 
-            textBox1.Location = new Point(232, 8);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 5;
+            txtClave.Location = new Point(232, 8);
+            txtClave.Name = "txtClave";
+            txtClave.Size = new Size(125, 27);
+            txtClave.TabIndex = 5;
+            txtClave.KeyDown += txtClave_KeyDown;
             // 
             // label6
             // 
@@ -213,7 +221,7 @@
             // 
             panel3.BackColor = Color.White;
             panel3.Controls.Add(button1);
-            panel3.Controls.Add(textBox6);
+            panel3.Controls.Add(txtTotal);
             panel3.Controls.Add(label7);
             panel3.Dock = DockStyle.Bottom;
             panel3.Location = new Point(0, 509);
@@ -231,13 +239,14 @@
             button1.TabIndex = 2;
             button1.Text = "PAGAR";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // textBox6
+            // txtTotal
             // 
-            textBox6.Location = new Point(414, 16);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(125, 27);
-            textBox6.TabIndex = 1;
+            txtTotal.Location = new Point(414, 16);
+            txtTotal.Name = "txtTotal";
+            txtTotal.Size = new Size(125, 27);
+            txtTotal.TabIndex = 1;
             // 
             // label7
             // 
@@ -250,25 +259,26 @@
             // 
             // panel4
             // 
-            panel4.Controls.Add(dataGridView1);
+            panel4.Controls.Add(dgvProductos);
             panel4.Dock = DockStyle.Fill;
             panel4.Location = new Point(0, 250);
             panel4.Name = "panel4";
             panel4.Size = new Size(639, 259);
             panel4.TabIndex = 3;
             // 
-            // dataGridView1
+            // dgvProductos
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(639, 259);
-            dataGridView1.TabIndex = 0;
+            dgvProductos.AllowUserToAddRows = false;
+            dgvProductos.AllowUserToDeleteRows = false;
+            dgvProductos.BackgroundColor = Color.White;
+            dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProductos.Dock = DockStyle.Fill;
+            dgvProductos.Location = new Point(0, 0);
+            dgvProductos.Name = "dgvProductos";
+            dgvProductos.ReadOnly = true;
+            dgvProductos.RowHeadersWidth = 51;
+            dgvProductos.Size = new Size(639, 259);
+            dgvProductos.TabIndex = 0;
             // 
             // frmVentas
             // 
@@ -279,9 +289,10 @@
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "frmVentas";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "frmVentas";
+            Load += frmVentas_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -290,7 +301,7 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();
             ResumeLayout(false);
         }
 
@@ -302,11 +313,11 @@
         private Panel panel2;
         private Button btnBuscar;
         private Button btnAgregar;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtImporte;
+        private TextBox txtCantidad;
+        private TextBox txtPrecio;
+        private TextBox txtNombre;
+        private TextBox txtClave;
         private Label label6;
         private Label label5;
         private Label label4;
@@ -314,9 +325,9 @@
         private Label label2;
         private Panel panel3;
         private Panel panel4;
-        private DataGridView dataGridView1;
+        private DataGridView dgvProductos;
         private Button button1;
-        private TextBox textBox6;
+        private TextBox txtTotal;
         private Label label7;
     }
 }

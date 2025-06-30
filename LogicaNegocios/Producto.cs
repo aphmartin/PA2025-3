@@ -98,5 +98,51 @@ namespace LogicaNegocios
         {
             throw new NotImplementedException();
         }
+
+        public bool fnBuscarPorClave()
+        {
+            // Lógica para buscar un producto por su ID
+            DataProducto dataProducto = new DataProducto();
+            DataTable productoEncontrado = dataProducto.BuscarPorClave(Clave);
+            if (productoEncontrado != null)
+            {
+                // Asignar los valores del producto encontrado a las propiedades de la clase
+                this.idProducto = Convert.ToInt32(productoEncontrado.Rows[0]["idProducto"]);
+                this.clave = productoEncontrado.Rows[0]["clave"].ToString();
+                this.nombre = productoEncontrado.Rows[0]["nombre"].ToString();
+                this.descripcion = productoEncontrado.Rows[0]["descripcion"].ToString();
+                this.precioCompra = Convert.ToDecimal(productoEncontrado.Rows[0]["precioCompra"]);
+                this.precioVenta = Convert.ToDecimal(productoEncontrado.Rows[0]["precioVenta"]);
+                this.existencia = Convert.ToInt32(productoEncontrado.Rows[0]["existencia"]);
+                this.ubicacion = productoEncontrado.Rows[0]["ubicacion"].ToString();
+                this.unidadMedida = productoEncontrado.Rows[0]["unidadMedida"].ToString();
+                this.minimo = Convert.ToInt32(productoEncontrado.Rows[0]["minimo"]);
+                this.maximo = Convert.ToInt32(productoEncontrado.Rows[0]["maximo"]);
+
+                return true; // Producto encontrado y asignado correctamente
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool GuardarVentaEnBaseDeDatos(List<Producto> productosVendidos)
+        {
+            // Lógica para guardar el la venta en la base de datos
+            int renglonAfectado=0;
+            DataProducto dataProducto = new DataProducto();
+            //Recorrer la lista de productos vendidos y actualizar la existencia en la base de datos
+            foreach (var producto in productosVendidos)
+            {
+                // Aquí podrías llamar a un método para actualizar la existencia del producto en la base de datos
+                renglonAfectado = dataProducto.InsertarVenta(producto.Clave, producto.Nombre, producto.Existencia.ToString(), producto.PrecioVenta.ToString("F2"), (producto.Existencia * producto.PrecioVenta).ToString("F2"), DateTime.Now.ToString("dd/MM/yyyy"));
+
+          
+            }
+            return renglonAfectado>0;
+            //dataProducto.Insertar() > 0;
+
+        }
     }
 }

@@ -68,7 +68,55 @@ namespace LogicaDatos
 
 
         }
+        public int InsertarVenta(string clave, string nombre, string cantidad, string precio, string importe, string fecha)
+        {
+            try
+            {
 
+
+                //Abrir conexion
+                comandoSQL.Connection = connSQL.AbrirConexion();
+
+                //Enviar nombre de recursos sql
+                comandoSQL.CommandText = "proc_InsertarVenta";
+
+                //Tipo de comando
+                comandoSQL.CommandType = System.Data.CommandType.StoredProcedure;
+
+                //Agregar parametro
+                comandoSQL.Parameters.AddWithValue("@clave", clave);
+                comandoSQL.Parameters.AddWithValue("@nombre", nombre);
+                comandoSQL.Parameters.AddWithValue("@cantidad", cantidad);
+                comandoSQL.Parameters.AddWithValue("@precio", precio);
+                comandoSQL.Parameters.AddWithValue("@importe", importe);
+                comandoSQL.Parameters.AddWithValue("@fecha", fecha);
+
+
+
+
+                //Ejecutar query
+                comandoSQL.ExecuteNonQuery();
+                comandoSQL.Parameters.Clear();
+                connSQL.CerrarConexion();
+
+                //Cerrar conexion
+                renglonesAfectados = 1;
+                Console.WriteLine("Se agrego correctamente");
+
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("DataUsuario: Insertar" + ex.Message);
+                renglonesAfectados = 0;
+                connSQL.CerrarConexion();
+            }
+            return renglonesAfectados;
+
+
+
+
+        }
         public DataTable BuscarPorId(int idProducto)
         {
             try
@@ -79,6 +127,48 @@ namespace LogicaDatos
                 comandoSQL.Connection = connSQL.AbrirConexion();
 
                 comandoSQL.CommandText = "SELECT * FROM PRODUCTOS WHERE IDK="+idProducto;
+                comandoSQL.CommandType = CommandType.Text;
+
+                //obtener un datareader
+                SqlDataAdapter adaptador = new SqlDataAdapter(comandoSQL);
+                //Llenar el datatable con los datos obtenidos
+                adaptador.Fill(consultaData);
+                //validar si tiene datos el datatable
+                if (consultaData.Rows.Count > 0)
+                {
+                    renglonesAfectados = consultaData.Rows.Count;
+                }
+                else
+                {
+                    renglonesAfectados = 0;
+                }
+
+
+
+
+                connSQL.CerrarConexion();
+                //Cerrar conexion
+                return consultaData;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("DataProducto: BuscarPorId" + ex.Message);
+                renglonesAfectados = 0;
+                return null;
+            }
+        }
+
+        public DataTable BuscarPorClave(string claveProducto)
+        {
+            try
+            {
+                DataTable consultaData = new DataTable();
+
+                //Abrir conexion
+                comandoSQL.Connection = connSQL.AbrirConexion();
+
+                comandoSQL.CommandText = "SELECT * FROM PRODUCTOS WHERE CLAVE=" + claveProducto;
                 comandoSQL.CommandType = CommandType.Text;
 
                 //obtener un datareader
